@@ -15,7 +15,7 @@ app.use("/post", postRouter);
 app.listen(PORT, async () => {
   await mongoose
     .connect(
-      "mongodb+srv://Eqaimproblem:Eqaimproblem@cluster0.urryhvq.mongodb.net/?retryWrites=true"
+      process.env.MONGO
     )
     .then(() => console.log("User heat the server!!"));
 });
