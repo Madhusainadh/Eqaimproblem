@@ -1,5 +1,7 @@
 # Eqaimproblem
 
+<a href="https://deployforntend-eqaim.vercel.app/" >link to open deployed version </a>
+
 <h3>To run this website Localy</h3>
 
 <h2>To run the backend </h2>
