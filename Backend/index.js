@@ -1,10 +1,21 @@
-const express = require('express')
+const express = require("express");
+const mongoose = require("mongoose");
+const postRouter = require("./Posts/Post.routes")
+require("dotenv").config();
+const cors = require("cors");
+const app = express();
+const PORT = process.env.PORT || 8080;
+app.use(cors());
+mongoose.set("strictQuery", true);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-const app = express()
-
-app.use(express.urlencoded({extended: true}))
-app.use(express.json())
-
-app.get('/', (req, res) => res.send('hello'))
-
-app.listen(8080, () => {console.log('server started on port 8080')})
+app.get("/", (req, res) => res.send("hello World"));
+app.use("/post", postRouter);
+app.listen(PORT, async () => {
+  await mongoose
+    .connect(
+      "mongodb+srv://Eqaimproblem:Eqaimproblem@cluster0.urryhvq.mongodb.net/?retryWrites=true"
+    )
+    .then(() => console.log("User heat the server!!"));
+});
