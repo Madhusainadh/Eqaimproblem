@@ -1,8 +1,8 @@
 # Eqaimproblem
 
-<a href="https://deployforntend-eqaim.vercel.app/" >link to open deployed version </a>
+<a href="https://deployforntend-eqaim.vercel.app/" >link to open deployed version https://deployforntend-eqaim.vercel.app/ </a>
 
-<h3>To run this website Localy</h3>
+<h3>To run this website Localy </h3>
 
 <h2>To run the backend </h2>
 <li>clone this repo and redirect to the backend folder and install npm package with command line `npm install`</li>
